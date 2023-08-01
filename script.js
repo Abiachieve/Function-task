@@ -128,3 +128,23 @@ var newArr = (function(arr) {
   });
 })(arr);
 console.log(newArr);
+
+//Return all the palindromes in an array using function
+function isPalindrome(str) {
+    var len = str.length;
+    for (var i = 0; i < len / 2; i++) {
+      if (str[i] !== str[len - 1 - i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  var arr = ["madam", "country", "civic", "mom"];
+  var palindromes = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (isPalindrome(arr[i])) {
+      palindromes.push(arr[i]);
+    }
+  }
+  console.log(palindromes);
